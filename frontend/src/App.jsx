@@ -9,6 +9,7 @@ import Nav from './components/Nav'
 import CategoryTitle from './components/CategoryTitle'
 import Layout from './components/Layout'
 import { Routes, Route } from 'react-router-dom'
+import CategoryPage from './components/CategoryPage'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -52,8 +53,7 @@ function App() {
     >
       <Routes>
         <Route index element={<Page />} />
-        <Route path="city" element={<CategoryTitle title="City" />} />
-        <Route path="ninjago" element={<CategoryTitle title="Ninjago" />} />
+        <Route path="/kategori/:slug" element={<CategoryPage /> } />
       </Routes>
     </Layout>
   )
